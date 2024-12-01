@@ -44,7 +44,7 @@ def display_images(x_data,y_data, title, display_label = True):
     
     
 #Carga del conjunto de datos en: X_pre and Y_pre
-data_dir = r'E:\dataset'
+data_dir = r'C:\Users\PC\Documents\pc\ia\asl_alphabet_train\asl_alphabet_train'
 uniq_labels = sorted(os.listdir(data_dir))
 X_pre, Y_pre = load_dataset(data_dir)
 print(X_pre.shape, Y_pre.shape)
@@ -113,7 +113,7 @@ history = model.fit(X_train, Y_train, epochs=15, verbose=1,
 model.evaluate(X_test, Y_test)
 
 #Guardar el modelo
-model.save(r'E:\Downloads\proyectosIA\proyecto_IA\model.h5')
+model.save(r'C:\Users\PC\Documents\pc\ia\model\model.h5')
 
 train_loss = history.history['loss']
 train_acc = history.history['accuracy']
